@@ -1,0 +1,147 @@
+/* App.css */
+
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('./assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Container that holds the card */
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* Card style for content */
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* File input styling */
+input[type="file"] {
+    margin: 15px 0;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    width: 80%;
+    transition: border 0.3s ease;
+}
+
+/* Hover effect for file input */
+input[type="file"]:hover {
+    border-color: #0056b3;
+}
+
+/* Button styling (Standard Website Buttons) */
+.analyze-btn, .analyze-different-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 20px;
+}
+
+.analyze-btn:hover, .analyze-different-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.analyze-btn:focus, .analyze-different-btn:focus {
+    outline: none;
+}
+
+.analyze-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+/* Result Box - Wider and more distinct */
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.result-box h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Animation for the card */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+  .card {
+      padding: 20px;
+      width: 90%;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .analyze-btn, .analyze-different-btn {
+      width: 100%;
+  }
+
+  .result-box {
+      max-width: 100%;
+      margin-top: 15px;
+  }
+}
+
